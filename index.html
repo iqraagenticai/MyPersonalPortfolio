@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Nadeem - AI Solutions Specialist</title>
+    <title>IqraTech - AI-Powered Business Solutions | Adelaide</title>
+    <meta name="description" content="Transform your business with custom AI solutions, chatbots, and digital marketing. 13+ years expertise in Adelaide, SA. Free consultation available.">
     <style>
         * {
             margin: 0;
@@ -12,10 +13,11 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+            min-height: 100vh;
         }
 
         .container {
@@ -24,17 +26,18 @@
             padding: 0 20px;
         }
 
-        .header {
-            background: rgba(255, 255, 255, 0.95);
+        /* Navigation */
+        nav {
+            background: rgba(15, 15, 35, 0.95);
             backdrop-filter: blur(10px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .nav {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -42,265 +45,50 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #4f46e5;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #00d4aa, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #4f46e5;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.2s forwards;
-        }
-
-        .hero .description {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.4s forwards;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #fff;
-            color: #4f46e5;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.6s forwards;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .section:nth-child(even) {
-            background: #f8fafc;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1e293b;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
             align-items: center;
         }
 
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            text-align: center;
+        .nav-links a:hover {
+            background: rgba(79, 172, 254, 0.2);
+            color: #4facfe;
         }
 
-        .stat-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        .cta-btn {
+            background: linear-gradient(45deg, #00d4aa, #4facfe);
+            color: white !important;
+            padding: 0.7rem 1.5rem !important;
+            border-radius: 25px;
+            font-weight: 600;
             transition: transform 0.3s ease;
         }
 
-        .stat-item:hover {
-            transform: translateY(-5px);
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 172, 254, 0.3);
         }
 
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #4f46e5;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: #64748b;
-            margin-top: 0.5rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            color: #4f46e5;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-
-        .experience-timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .timeline-item {
-            background: white;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .timeline-item:hover {
-            transform: translateX(10px);
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -20px;
-            top: 50%;
-            width: 15px;
-            height: 15px;
-            background: #4f46e5;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-
-        .job-title {
-            color: #4f46e5;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
-        .company {
-            color: #64748b;
-            font-size: 1.1rem;
-            margin: 0.5rem 0;
-        }
-
-        .job-description {
-            margin-top: 1rem;
-            line-height: 1.7;
-        }
-
-        .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: black;
-            text-align: center;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-item h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer {
-            background: #1e293b;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* Mobile Menu */
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -310,308 +98,1376 @@
         .mobile-menu span {
             width: 25px;
             height: 3px;
-            background: #333;
+            background: white;
             margin: 3px 0;
             transition: 0.3s;
         }
 
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #2d1b69 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234facfe' fill-opacity='0.05'%3E%3Ccircle cx='7' cy='7' r='7'/%3E%3Ccircle cx='53' cy='53' r='7'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #4facfe, #00d4aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #00d4aa, #4facfe);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #4facfe;
+        }
+
+        .hero-visual {
+            text-align: center;
+        }
+
+        .floating-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-card h3 {
+            color: #4facfe;
+            margin-bottom: 1rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #00d4aa;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0f0f23;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            border-color: #4facfe;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #0f0f23;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            color: #666;
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            color: #00d4aa;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #4facfe, #00d4aa);
+            padding: 5px;
+        }
+
+        .about-text h2 {
+            color: #0f0f23;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: linear-gradient(45deg, #4facfe, #00d4aa);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Collaboration Section */
+        .collaboration {
+            background: #0f0f23;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .collab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .collab-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .collab-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .collab-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4facfe;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: #f8f9ff;
+            padding: 2rem;
+            border-radius: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #0f0f23;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4facfe;
+        }
+
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #4facfe, #00d4aa);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f0f23;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #4facfe;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #4facfe;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu {
                 display: flex;
             }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .about-grid {
+
+            .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
-            .stats {
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .contact-content {
                 grid-template-columns: 1fr;
             }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
+
+            .hero-buttons {
+                justify-content: center;
             }
-            
-            .timeline-item:hover {
-                transform: none;
-            }
+        }
+
+        /* Page Navigation */
+        .page-nav {
+            display: none;
+        }
+
+        .page-nav.active {
+            display: block;
+        }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #0f0f23;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(79, 172, 254, 0.3);
+            border-radius: 50%;
+            border-top-color: #4facfe;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <div class="logo">Mohammed Nadeem</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">IqraTech</div>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('services')">Services</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('collaboration')">Partner</a></li>
+                    <li><a href="#" onclick="showPage('contact')" class="cta-btn">Get Started</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Mohammed Nadeem</h1>
-            <div class="subtitle">AI Solutions Specialist & IT Operations Expert</div>
-            <p class="description">
-                Transforming businesses through intelligent automation and AI-driven solutions. 
-                13+ years of IT expertise now focused on emerging technologies and process optimization.
-            </p>
-            <a href="#contact" class="cta-button">Let's Work Together</a>
         </div>
-    </section>
+    </nav>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">13+</span>
-                        <span class="stat-label">Years Experience</span>
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Transform Your Business with AI Excellence</h1>
+                        <p>From intelligent chatbots to SEO mastery - we build AI-driven solutions that convert visitors into customers and automate your success. 13+ years of IT expertise now focused on emerging technologies.</p>
+                        <div class="hero-buttons">
+                            <a href="#" onclick="showPage('contact')" class="btn btn-primary">Get Free Consultation</a>
+                            <a href="#" onclick="showPage('services')" class="btn btn-secondary">View Services</a>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Projects Completed</span>
+                    <div class="hero-visual">
+                        <div class="floating-card">
+                            <h3 style="color: #0f0f23; margin-bottom: 0.5rem;">Mohammed Nadeem</h3>
+                            <p style="color: #666; font-weight: 500;">Founder & AI Solutions Architect</p>
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1rem; color: #00d4aa;">
+                                <span>📍</span>
+                                <span style="font-size: 0.9rem;">Mawson Lakes, SA</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">8</span>
-                        <span class="stat-label">Certifications</span>
+                    <div class="about-text">
+                        <h2>Transforming Businesses Through Intelligent Automation</h2>
+                        <p>I bring over 13 years of IT operations expertise with a unique combination of technical skills, leadership experience, and a proven track record of delivering results. My journey has evolved from traditional IT support to embracing cutting-edge technologies like AI and cloud solutions.</p>
+                        
+                        <p>Currently based in Adelaide, SA, I specialize in automating processes, implementing AI solutions, and bridging the gap between complex technology and business needs. My experience spans from hands-on technical work to leading teams of 18+ professionals.</p>
+                        
+                        <p>I'm passionate about continuous learning and staying ahead of technology trends, particularly in AI, automation, and cloud technologies. This positions me perfectly to help businesses modernize their operations and embrace intelligent solutions.</p>
+
+                        <div class="expertise-tags">
+                            <span class="tag">AI & Machine Learning</span>
+                            <span class="tag">Chatbot Development</span>
+                            <span class="tag">Process Automation</span>
+                            <span class="tag">Cloud Solutions</span>
+                            <span class="tag">Team Leadership</span>
+                            <span class="tag">SEO & Digital Marketing</span>
+                        </div>
+
+                        <div style="margin-top: 2rem;">
+                            <h3 style="color: #0f0f23; margin-bottom: 1rem;">Why Choose IqraTech?</h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">✓</div>
+                                    <div>
+                                        <strong>Proven Technical Leadership</strong>
+                                        <p style="margin: 0; color: #666;">13+ years in IT operations and experience leading teams of 18+ professionals</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">✓</div>
+                                    <div>
+                                        <strong>AI-First Approach</strong>
+                                        <p style="margin: 0; color: #666;">We implement AI solutions that solve real business problems and deliver measurable ROI</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">✓</div>
+                                    <div>
+                                        <strong>Local Adelaide Expertise</strong>
+                                        <p style="margin: 0; color: #666;">Based in Mawson Lakes, we understand the Australian market and can provide face-to-face consultations</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 40px; height: 40px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">✓</div>
+                                    <div>
+                                        <strong>End-to-End Solutions</strong>
+                                        <p style="margin: 0; color: #666;">From strategy to implementation to ongoing support, we handle everything</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="about-text">
-                    <p>I bring over 13 years of IT operations expertise with a unique combination of technical skills, leadership experience, and a proven track record of delivering results. My journey has evolved from traditional IT support to embracing cutting-edge technologies like AI and cloud solutions.</p>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section style="background: white; padding: 80px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Success Stories</h2>
+                    <p>Real results from real clients who transformed their businesses with our AI solutions</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-right: 1rem;">🛒</div>
+                            <div>
+                                <h3 style="margin: 0; color: #0f0f23;">E-commerce Success</h3>
+                                <p style="margin: 0; color: #666; font-size: 0.9rem;">Online Retail Store</p>
+                            </div>
+                        </div>
+                        <p><strong>Challenge:</strong> High cart abandonment, overwhelmed customer service</p>
+                        <p><strong>Solution:</strong> Custom chatbot with product recommendations and order tracking</p>
+                        <p><strong>Results:</strong> <span style="color: #00d4aa; font-weight: bold;">35% reduction in cart abandonment, 50% fewer support tickets, 24/7 customer assistance</span></p>
+                    </div>
+
+                    <div style="background: linear-gradient(135deg, #fff8f0 0%, #ffe8d4 100%); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-right: 1rem;">🦷</div>
+                            <div>
+                                <h3 style="margin: 0; color: #0f0f23;">Local Business SEO</h3>
+                                <p style="margin: 0; color: #666; font-size: 0.9rem;">Adelaide Dental Practice</p>
+                            </div>
+                        </div>
+                        <p><strong>Challenge:</strong> Low online visibility, few new patient inquiries</p>
+                        <p><strong>Solution:</strong> Complete SEO overhaul with local optimization and content strategy</p>
+                        <p><strong>Results:</strong> <span style="color: #00d4aa; font-weight: bold;">#1 Google ranking for key terms, 400% increase in appointment bookings</span></p>
+                    </div>
+
+                    <div style="background: linear-gradient(135f, #f0fff8 0%, #d4ffe8 100%); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; margin-right: 1rem;">📊</div>
+                            <div>
+                                <h3 style="margin: 0; color: #0f0f23;">AI Marketing Automation</h3>
+                                <p style="margin: 0; color: #666; font-size: 0.9rem;">B2B Service Company</p>
+                            </div>
+                        </div>
+                        <p><strong>Challenge:</strong> Manual lead qualification, inconsistent follow-up</p>
+                        <p><strong>Solution:</strong> AI-powered lead scoring and email automation system</p>
+                        <p><strong>Results:</strong> <span style="color: #00d4aa; font-weight: bold;">60% faster lead qualification, 45% improvement in conversion rates</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%); padding: 80px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Process</h2>
+                    <p>A proven methodology that ensures your AI implementation is successful and delivers real results</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
+                        <h3 style="color: #0f0f23; margin-bottom: 1rem;">Discovery & Strategy (Free)</h3>
+                        <ul style="list-style: none; text-align: left; color: #666;">
+                            <li>✓ Analyze your current digital presence</li>
+                            <li>✓ Identify automation opportunities</li>
+                            <li>✓ Develop custom AI strategy roadmap</li>
+                            <li>✓ Provide detailed project proposal</li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
+                        <h3 style="color: #0f0f23; margin-bottom: 1rem;">Design & Development</h3>
+                        <ul style="list-style: none; text-align: left; color: #666;">
+                            <li>✓ Create wireframes and prototypes</li>
+                            <li>✓ Develop and train AI models</li>
+                            <li>✓ Build integrations with your systems</li>
+                            <li>✓ Conduct thorough testing and optimization</li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
+                        <h3 style="color: #0f0f23; margin-bottom: 1rem;">Launch & Optimization</h3>
+                        <ul style="list-style: none; text-align: left; color: #666;">
+                            <li>✓ Deploy solutions with minimal disruption</li>
+                            <li>✓ Monitor performance and gather feedback</li>
+                            <li>✓ Provide comprehensive team training</li>
+                            <li>✓ Continuous optimization based on real data</li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <div style="width: 80px; height: 80px; background: linear-gradient(45deg, #4facfe, #00d4aa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
+                        <h3 style="color: #0f0f23; margin-bottom: 1rem;">Ongoing Support & Evolution</h3>
+                        <ul style="list-style: none; text-align: left; color: #666;">
+                            <li>✓ 24/7 monitoring and maintenance</li>
+                            <li>✓ Regular performance reports and insights</li>
+                            <li>✓ Feature updates and improvements</li>
+                            <li>✓ Strategic consultation for business growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Collaboration Page -->
+    <div id="collaboration" class="page">
+        <section class="collaboration">
+            <div class="container">
+                <div class="section-header">
+                    <h2 style="color: white;">Partner With IqraTech</h2>
+                    <p style="color: rgba(255,255,255,0.8);">Join our network of collaborators and grow together in the AI revolution</p>
+                </div>
+
+                <div class="collab-grid">
+                    <div class="collab-card">
+                        <div class="collab-icon">🤝</div>
+                        <h3>Strategic Partners</h3>
+                        <p>Looking for agencies, consultants, and businesses to form strategic partnerships for larger AI implementations and co-marketing opportunities.</p>
+                        <ul style="list-style: none; margin-top: 1rem; text-align: left;">
+                            <li style="margin-bottom: 0.5rem;">✓ Revenue sharing opportunities</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Joint marketing initiatives</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Cross-referral programs</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Technical knowledge sharing</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-card">
+                        <div class="collab-icon">💼</div>
+                        <h3>Freelance Network</h3>
+                        <p>Join our network of skilled freelancers specializing in AI, web development, design, and digital marketing to collaborate on projects.</p>
+                        <ul style="list-style: none; margin-top: 1rem; text-align: left;">
+                            <li style="margin-bottom: 0.5rem;">✓ Project-based collaboration</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Skill complementing opportunities</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Professional development</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Fair compensation structure</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-card">
+                        <div class="collab-icon">🎓</div>
+                        <h3>Technology Mentorship</h3>
+                        <p>Offering mentorship opportunities for developers and IT professionals looking to transition into AI and automation technologies.</p>
+                        <ul style="list-style: none; margin-top: 1rem; text-align: left;">
+                            <li style="margin-bottom: 0.5rem;">✓ One-on-one guidance sessions</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Real-world project experience</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Career transition support</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Industry insights sharing</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-card">
+                        <div class="collab-icon">🔗</div>
+                        <h3>Integration Partners</h3>
+                        <p>Collaborate with software vendors, SaaS providers, and platform developers to create seamless AI integrations for mutual clients.</p>
+                        <ul style="list-style: none; margin-top: 1rem; text-align: left;">
+                            <li style="margin-bottom: 0.5rem;">✓ API integration development</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Joint solution development</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Technical documentation</li>
+                            <li style="margin-bottom: 0.5rem;">✓ Co-branded offerings</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1rem;">Why Collaborate With Us?</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                        <div>
+                            <h4 style="color: #4facfe; margin-bottom: 0.5rem;">Proven Expertise</h4>
+                            <p>13+ years of IT leadership and emerging technology implementation</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #4facfe; margin-bottom: 0.5rem;">Growing Market</h4>
+                            <p>AI and automation services are in high demand with excellent growth potential</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #4facfe; margin-bottom: 0.5rem;">Quality Focus</h4>
+                            <p>We prioritize delivering exceptional results over quantity of projects</p>
+                        </div>
+                        <div>
+                            <h4 style="color: #4facfe; margin-bottom: 0.5rem;">Win-Win Approach</h4>
+                            <p>All collaborations are structured for mutual benefit and long-term success</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); border-radius: 20px; padding: 2rem; margin-top: 3rem;">
+                    <h3 style="text-align: center; margin-bottom: 1.5rem;">Industries We're Targeting</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🛒</div>
+                            <strong>E-commerce & Retail</strong>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏥</div>
+                            <strong>Healthcare</strong>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🏠</div>
+                            <strong>Real Estate</strong>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚖️</div>
+                            <strong>Professional Services</strong>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🍽️</div>
+                            <strong>Hospitality</strong>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎓</div>
+                            <strong>Education</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1rem;">Ready to Collaborate?</h3>
+                    <p style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Let's discuss how we can work together to deliver exceptional AI solutions and grow our businesses together.</p>
+                    <a href="#" onclick="showPage('contact')" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem;">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Let's Transform Your Business</h2>
+                    <p>Ready to get started? Contact us for a free consultation and discover how AI can accelerate your growth.</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h3 style="margin-bottom: 1.5rem; color: #0f0f23;">Get Your Free AI Strategy Session</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interest *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="chatbot">Custom Chatbot Development</option>
+                                    <option value="ai-agents">AI Agents & Automation</option>
+                                    <option value="seo">SEO & Search Optimization</option>
+                                    <option value="digital-marketing">Digital Marketing & Growth</option>
+                                    <option value="collaboration">Partnership/Collaboration</option>
+                                    <option value="consultation">General Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Project Budget Range</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-5k">Under $5,000</option>
+                                    <option value="5k-15k">$5,000 - $15,000</option>
+                                    <option value="15k-50k">$15,000 - $50,000</option>
+                                    <option value="50k-plus">$50,000+</option>
+                                    <option value="ongoing">Ongoing Monthly Retainer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="timeline">Desired Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline</option>
+                                    <option value="asap">ASAP (Within 2 weeks)</option>
+                                    <option value="1-month">Within 1 month</option>
+                                    <option value="2-3-months">2-3 months</option>
+                                    <option value="flexible">Flexible timeline</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Project Details & Goals *</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, current challenges, and what you hope to achieve with AI solutions..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;">Schedule Free Consultation</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3 style="margin-bottom: 1.5rem; color: #0f0f23;">Get in Touch</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>0469 081 788</p>
+                                <p style="font-size: 0.9rem; color: #666;">Available Mon-Fri 9AM-6PM ACST</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div>
+                                <strong>Email</strong>
+                                <p>hello@iqratech.site</p>
+                                <p style="font-size: 0.9rem; color: #666;">We typically respond within 2 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <strong>Location</strong>
+                                <p>Mawson Lakes, SA 5095</p>
+                                <p>Australia</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">⏰</div>
+                            <div>
+                                <strong>Availability</strong>
+                                <p>Available for immediate project start</p>
+                                <p style="font-size: 0.9rem; color: #666;">VISA 489 - Valid until July 2027</p>
+                            </div>
+                        </div>
+
+                        <div style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%); padding: 1.5rem; border-radius: 15px; margin-top: 2rem;">
+                            <h4 style="color: #0f0f23; margin-bottom: 1rem;">Free Consultation Includes:</h4>
+                            <ul style="list-style: none;">
+                                <li style="margin-bottom: 0.5rem;">✓ Current technology audit</li>
+                                <li style="margin-bottom: 0.5rem;">✓ AI opportunity identification</li>
+                                <li style="margin-bottom: 0.5rem;">✓ Custom strategy recommendations</li>
+                                <li style="margin-bottom: 0.5rem;">✓ No-obligation project estimate</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: linear-gradient(45deg, #4facfe, #00d4aa); padding: 1.5rem; border-radius: 15px; margin-top: 2rem; color: white; text-align: center;">
+                            <h4 style="margin-bottom: 1rem;">Ready to Get Started?</h4>
+                            <p style="margin-bottom: 1rem; font-size: 0.95rem;">Book a call directly or send us a message using the form. We'll get back to you within 2 hours during business hours.</p>
+                            <div style="font-size: 1.5rem; font-weight: bold;">Let's build something amazing together! 🚀</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%); padding: 80px 0;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about our AI solutions and services</p>
+                </div>
+                
+                <div style="display: grid; gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: #0f0f23; margin-bottom: 0.5rem;">How long does it take to build a custom chatbot?</h3>
+                        <p style="color: #666;">Most chatbots are ready within 2-4 weeks, depending on complexity and integrations required.</p>
+                    </div>
                     
-                    <p>Currently based in Adelaide, SA, I specialize in automating processes, implementing AI solutions, and bridging the gap between complex technology and business needs. My experience spans from hands-on technical work to leading teams of 18+ professionals.</p>
+                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: #0f0f23; margin-bottom: 0.5rem;">Can AI really replace human customer service?</h3>
+                        <p style="color: #666;">AI handles 80% of routine inquiries, freeing your team to focus on complex issues that require human touch.</p>
+                    </div>
                     
-                    <p>I'm passionate about continuous learning and staying ahead of technology trends, particularly in AI, automation, and cloud technologies. This positions me perfectly to help businesses modernize their operations and embrace intelligent solutions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>🤖 AI & Automation</h3>
-                    <ul class="skill-list">
-                        <li>PowerShell Automation Scripts</li>
-                        <li>Process Optimization</li>
-                        <li>Workflow Automation</li>
-                        <li>Data Analysis & Reporting</li>
-                        <li>AI Implementation Strategy</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>☁️ Cloud Technologies</h3>
-                    <ul class="skill-list">
-                        <li>Microsoft Azure (Certified)</li>
-                        <li>AWS Cloud Practitioner</li>
-                        <li>Office 365 Administration</li>
-                        <li>Virtual Machine Management</li>
-                        <li>Cloud Migration Support</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>🔧 Technical Skills</h3>
-                    <ul class="skill-list">
-                        <li>SCCM Administration</li>
-                        <li>Active Directory Management</li>
-                        <li>Hyper-V & vSphere</li>
-                        <li>Veeam Backup Solutions</li>
-                        <li>ServiceNow Platform</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>💻 Development</h3>
-                    <ul class="skill-list">
-                        <li>Visual Studio C#</li>
-                        <li>Excel VBA & Macros</li>
-                        <li>Power Query & Pivots</li>
-                        <li>Custom Application Development</li>
-                        <li>Database Management</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>🏆 Certifications</h3>
-                    <ul class="skill-list">
-                        <li>ITIL V4 Foundation</li>
-                        <li>Microsoft Azure Fundamentals</li>
-                        <li>AWS Cloud Practitioner</li>
-                        <li>Agile Methodology</li>
-                        <li>Advanced Excel</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>👥 Leadership</h3>
-                    <ul class="skill-list">
-                        <li>Team Leadership (18+ members)</li>
-                        <li>Training & Mentorship</li>
-                        <li>Process Improvement</li>
-                        <li>Stakeholder Management</li>
-                        <li>Project Coordination</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="job-title">IT Operations Officer - Level 2</div>
-                    <div class="company">Liebherr Australia, Adelaide | Dec 2023 - Present</div>
-                    <div class="job-description">
-                        Leading national IT operations supporting employees across Australia and New Zealand. Developed innovative automation solutions including PowerShell scripts for user management, created custom C# applications for asset tracking, and successfully migrated application deployment to SCCM. Key achievements include process automation reducing manual effort by 70% and training multiple team members across different states.
+                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: #0f0f23; margin-bottom: 0.5rem;">What's the ROI of SEO investment?</h3>
+                        <p style="color: #666;">Our clients typically see 300-500% ROI within 12 months through increased organic traffic and conversions.</p>
                     </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="job-title">Tech Lead - Service Desk</div>
-                    <div class="company">Cognizant Technologies, Bangalore | Aug 2021 - Sep 2023</div>
-                    <div class="job-description">
-                        Led a team of 18 agents in backlog management and process improvements. Achieved "Best Lead of the Month" 6 times, including 3 consecutive times in 2023. Created 18 ServiceNow dashboards, developed automated solutions using Excel VBA, and successfully managed cloud transition projects. Recognized with Innovation Master and Excel Champion awards.
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: #0f0f23; margin-bottom: 0.5rem;">Do you work with businesses outside Adelaide?</h3>
+                        <p style="color: #666;">Absolutely! While we're based in Adelaide, we serve clients across Australia and internationally through remote collaboration.</p>
                     </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="job-title">Subject Matter Expert</div>
-                    <div class="company">IBM India - NAB Service Desk | Apr 2018 - Aug 2021</div>
-                    <div class="job-description">
-                        Provided expert technical support for complex issues involving cloud desktops, O365, VMware, and enterprise applications. Developed training modules and conducted floor-wide training sessions. Created Excel automation tools that improved team efficiency and earned recognition as "Best SME of the Month."
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="job-title">Technical Support Officer</div>
-                    <div class="company">IBM India - NAB Service Desk | Apr 2014 - Mar 2018</div>
-                    <div class="job-description">
-                        Delivered quality technical support for NAB employees, troubleshooting complex issues with proprietary software, network systems, and cloud applications. Participated in Agile projects for backlog reduction and maintained high service standards while building strong customer relationships.
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                        <h3 style="color: #0f0f23; margin-bottom: 0.5rem;">What makes your AI solutions different?</h3>
+                        <p style="color: #666;">We focus on practical business applications rather than flashy demos. Every AI solution we build directly impacts your bottom line.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <section id="contact" class="contact section">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
-                Ready to transform your business with AI and automation solutions? 
-                Let's discuss how my expertise can help you achieve your goals.
-            </p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>📞 Phone</h3>
-                    <p>0469 081 788</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>IqraTech</h3>
+                    <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Transforming businesses through intelligent automation and AI-driven solutions.</p>
+                    <p style="color: rgba(255,255,255,0.7);">📍 Mawson Lakes, SA 5095, Australia</p>
+                    <p style="color: rgba(255,255,255,0.7);">📞 0469 081 788</p>
+                    <p style="color: rgba(255,255,255,0.7);">📧 hello@iqratech.site</p>
                 </div>
-                <div class="contact-item">
-                    <h3>📍 Location</h3>
-                    <p>Mawson Lakes, SA 5095<br>Australia</p>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <p><a href="#" onclick="showPage('services')">Custom Chatbot Development</a></p>
+                    <p><a href="#" onclick="showPage('services')">AI Agents & Automation</a></p>
+                    <p><a href="#" onclick="showPage('services')">SEO & Search Optimization</a></p>
+                    <p><a href="#" onclick="showPage('services')">Digital Marketing & Growth</a></p>
                 </div>
-                <div class="contact-item">
-                    <h3>💼 Status</h3>
-                    <p>Available for Freelance Projects<br>VISA 489 - Valid until July 2027</p>
+                
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="#" onclick="showPage('about')">About Us</a></p>
+                    <p><a href="#" onclick="showPage('collaboration')">Partnership</a></p>
+                    <p><a href="#" onclick="showPage('contact')">Contact</a></p>
+                    <p><a href="#" onclick="showPage('contact')">Free Consultation</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Industries</h3>
+                    <p><a href="#">E-commerce & Retail</a></p>
+                    <p><a href="#">Healthcare</a></p>
+                    <p><a href="#">Real Estate</a></p>
+                    <p><a href="#">Professional Services</a></p>
+                    <p><a href="#">Education</a></p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Mohammed Nadeem. All rights reserved. | AI Solutions Specialist & IT Operations Expert</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 IqraTech. All rights reserved. | Designed & Developed with ❤️ in Adelaide, SA</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
+        // Remove loading screen after page loads
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+            }, 1000);
+        });
+
+        // Page navigation
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.style.backgroundColor = 'transparent';
+                link.style.color = '#ffffff';
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.service || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you! Your message has been sent successfully. We\'ll get back to you within 2 hours during business hours.');
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Mobile menu toggle (placeholder for future implementation)
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                        behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Add scroll effect to header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate service cards on hover
+            const serviceCards = document.querySelectorAll('.service-card, .collab-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add typing effect to main headline (simple version)
+            const headline = document.querySelector('.hero-text h1');
+            if (headline) {
+                const text = headline.textContent;
+                headline.textContent = '';
+                let i = 0;
+                
+                function typeWriter() {
+                    if (i < text.length) {
+                        headline.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 50);
+                    }
+                }
+                
+                setTimeout(typeWriter, 1500);
             }
         });
 
-        // Animate stats on scroll
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = entry.target.querySelectorAll('.stat-number');
-                    statNumbers.forEach(stat => {
-                        const finalNumber = stat.textContent;
-                        const number = parseInt(finalNumber);
-                        let current = 0;
-                        const increment = number / 50;
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= number) {
-                                stat.textContent = finalNumber;
-                                clearInterval(timer);
-                            } else {
-                                stat.textContent = Math.floor(current) + (finalNumber.includes('+') ? '+' : '');
-                            }
-                        }, 50);
-                    });
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        const statsSection = document.querySelector('.stats');
-        if (statsSection) {
-            observer.observe(statsSection);
+        // Simple analytics placeholder
+        function trackEvent(event, category, action) {
+            console.log(`Analytics: ${category} - ${action} - ${event}`);
+            // Replace with actual analytics code (Google Analytics, etc.)
         }
+
+        // Track page views
+        function trackPageView(page) {
+            trackEvent('Page View', 'Navigation', page);
+        }
+
+        // Track form interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    trackEvent('Form Submit', 'Contact', 'Consultation Request');
+                });
+            }
+        });
     </script>
 </body>
 </html>
+                3>🤖 AI-Powered Solutions</h3>
+                            <p>Custom chatbots, intelligent automation, and data-driven insights that transform how you do business.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>13+</h3>
+                        <p>Years IT Expertise</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>80%</h3>
+                        <p>Reduction in Support Tickets</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>300%</h3>
+                        <p>Average SEO Traffic Increase</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>AI Agent Availability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Core Services</h2>
+                    <p>Comprehensive AI and digital solutions designed to accelerate your business growth</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🤖</div>
+                        <h3>Custom Chatbot Development</h3>
+                        <p>Transform customer interactions with intelligent conversational AI that works 24/7.</p>
+                        <ul class="service-features">
+                            <li>Customer service automation</li>
+                            <li>Lead generation & qualification</li>
+                            <li>E-commerce sales assistance</li>
+                            <li>Multi-platform deployment</li>
+                        </ul>
+                        <a href="#" onclick="showPage('services')" class="btn btn-primary">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🧠</div>
+                        <h3>AI Agents & Automation</h3>
+                        <p>Deploy AI agents that handle complex business processes without human intervention.</p>
+                        <ul class="service-features">
+                            <li>Content creation agents</li>
+                            <li>Data analysis & insights</li>
+                            <li>Email marketing automation</li>
+                            <li>Document processing</li>
+                        </ul>
+                        <a href="#" onclick="showPage('services')" class="btn btn-primary">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🎯</div>
+                        <h3>SEO & Search Optimization</h3>
+                        <p>Dominate search results with AI-enhanced SEO strategies that actually work.</p>
+                        <ul class="service-features">
+                            <li>Technical SEO optimization</li>
+                            <li>AI-powered keyword research</li>
+                            <li>Local Adelaide SEO</li>
+                            <li>Performance tracking</li>
+                        </ul>
+                        <a href="#" onclick="showPage('services')" class="btn btn-primary">Learn More</a>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">📈</div>
+                        <h3>Digital Marketing & Growth</h3>
+                        <p>Full-service digital marketing powered by AI insights and automation.</p>
+                        <ul class="service-features">
+                            <li>Social media management</li>
+                            <li>Google & Facebook Ads</li>
+                            <li>Email marketing sequences</li>
+                            <li>Conversion optimization</li>
+                        </ul>
+                        <a href="#" onclick="showPage('services')" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page">
+        <section style="background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%); color: white; padding: 120px 0 80px;">
+            <div class="container">
+                <div class="section-header" style="color: white;">
+                    <h2 style="color: white;">Our Services</h2>
+                    <p style="color: rgba(255,255,255,0.8);">Comprehensive AI and digital solutions tailored to your business needs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" style="background: white;">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card" style="background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);">
+                        <div class="service-icon">🤖</div>
+                        <h3>Custom Chatbot Development</h3>
+                        <p><strong>Transform customer interactions with intelligent conversational AI that works 24/7.</strong></p>
+                        
+                        <h4 style="color: #0f0f23; margin: 1.5rem 0 1rem;">What We Deliver:</h4>
+                        <ul class="service-features">
+                            <li>Customer service chatbots that reduce support tickets by 80%</li>
+                            <li>Lead generation bots that qualify prospects automatically</li>
+                            <li>E-commerce chatbots that guide customers and boost sales</li>
+                            <li>Multi-platform deployment (website, WhatsApp, Facebook, Telegram)</li>
+                            <li>Integration with your existing CRM and business systems</li>
+                        </ul>
+                        
+                        <p style="background: rgba(79, 172, 254, 0.1); padding: 1rem; border-radius: 10px; margin: 1rem 0;"><strong>Perfect for:</strong> E-commerce stores, service businesses, healthcare practices, real estate agencies</p>
+                    </div>
+
+                    <div class="service-card" style="background: linear-gradient(135deg, #fff8f0 0%, #ffe8d4 100%);">
+                        <div class="service-icon">🧠</div>
+                        <h3>AI Agents & Intelligent Automation</h3>
+                        <p><strong>Deploy AI agents that handle complex business processes without human intervention.</strong></p>
+                        
+                        <h4 style="color: #0f0f23; margin: 1.5rem 0 1rem;">What We Build:</h4>
+                        <ul class="service-features">
+                            <li>Content creation agents for social media and blogs</li>
+                            <li>Data analysis agents that generate business insights</li>
+                            <li>Email marketing automation with AI personalization</li>
+                            <li>Appointment scheduling and calendar management agents</li>
+                            <li>Document processing and workflow automation</li>
+                        </ul>
+                        
+                        <p style="background: rgba(0, 212, 170, 0.1); padding: 1rem; border-radius: 10px; margin: 1rem 0;"><strong>Business Impact:</strong> Save 15-30 hours per week on repetitive tasks while improving accuracy and consistency.</p>
+                    </div>
+
+                    <div class="service-card" style="background: linear-gradient(135deg, #f0fff8 0%, #d4ffe8 100%);">
+                        <div class="service-icon">🎯</div>
+                        <h3>SEO & Search Optimization</h3>
+                        <p><strong>Dominate search results with AI-enhanced SEO strategies that actually work.</strong></p>
+                        
+                        <h4 style="color: #0f0f23; margin: 1.5rem 0 1rem;">Our SEO Approach:</h4>
+                        <ul class="service-features">
+                            <li>Comprehensive website audits and technical optimization</li>
+                            <li>AI-powered keyword research and content strategy</li>
+                            <li>Local SEO for Adelaide and Australian businesses</li>
+                            <li>Google Business Profile optimization</li>
+                            <li>Performance tracking and monthly reporting</li>
+                            <li>Voice search and mobile optimization</li>
+                        </ul>
+                        
+                        <p style="background: rgba(79, 172, 254, 0.1); padding: 1rem; border-radius: 10px; margin: 1rem 0;"><strong>Results You Can Expect:</strong> 3x increase in organic traffic within 6 months, higher search rankings, and more qualified leads.</p>
+                    </div>
+
+                    <div class="service-card" style="background: linear-gradient(135deg, #fff0f8 0%, #ffd4e8 100%);">
+                        <div class="service-icon">📈</div>
+                        <h3>Digital Marketing & Growth</h3>
+                        <p><strong>Full-service digital marketing powered by AI insights and automation.</strong></p>
+                        
+                        <h4 style="color: #0f0f23; margin: 1.5rem 0 1rem;">Marketing Services:</h4>
+                        <ul class="service-features">
+                            <li>Social media management and content creation</li>
+                            <li>Google Ads and Facebook advertising campaigns</li>
+                            <li>Email marketing automation sequences</li>
+                            <li>Conversion rate optimization</li>
+                            <li>Analytics setup and performance tracking</li>
+                            <li>Brand development and online reputation management</li>
+                        </ul>
+                        
+                        <p style="background: rgba(0, 212, 170, 0.1); padding: 1rem; border-radius: 10px; margin: 1rem 0;"><strong>Why Choose Us:</strong> We combine 13+ years of technical expertise with cutting-edge AI tools to deliver marketing that actually drives business growth.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1rem; color: #0f0f23;">Ready to Get Started?</h3>
+                    <p style="margin-bottom: 2rem; color: #666;">Book your free consultation to discuss how these services can transform your business.</p>
+                    <a href="#" onclick="showPage('contact')" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 2.5rem;">Schedule Free Consultation</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="profile-card">
+                            <div style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1rem; background: linear-gradient(45deg, #4facfe, #00d4aa); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
+                                MN
+                            </div>
+                            <h
