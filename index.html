@@ -636,13 +636,13 @@
     opacity: 0;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-        
-      .chatbot-window.active {
+
+    
+   .chatbot-window.active {
     display: flex;
     transform: scale(1);
     opacity: 1;
 }
-        
         .chatbot-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -697,14 +697,15 @@
             line-height: 1.4;
         }
         
-        /* Mobile & small screen adjustments */
+ /* Mobile & small screen adjustments */
 @media (max-width: 480px) {
     .chatbot-window {
         width: calc(100vw - 40px);  /* full width minus margin */
         height: 70vh;               /* 70% of viewport height */
-        bottom: 20px;
-        right: 20px;
-        left: 20px;
+        bottom: 10px;               /* small margin from bottom */
+        right: 10px;                /* small margin from right */
+        left: 10px;                 /* small margin from left */
+        max-height: 80vh;           /* max height on small screens */
         border-radius: 12px;
     }
 }
