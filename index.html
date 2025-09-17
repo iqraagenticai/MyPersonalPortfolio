@@ -584,6 +584,160 @@
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
+
+
+         /*adding Chat styles
+         /* Floating Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        
+        .chatbot-toggle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+        
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 400px;
+            height: 600px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .chatbot-window.active {
+            display: flex;
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .chatbot-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chatbot-iframe {
+            flex: 1;
+            border: none;
+            width: 100%;
+        }
+        
+        .welcome-message {
+            padding: 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            text-align: center;
+        }
+        
+        .welcome-message h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .welcome-message p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 480px) {
+            .chatbot-window {
+                width: calc(100vw - 40px);
+                height: 70vh;
+                bottom: 70px;
+                right: 20px;
+                left: 20px;
+            }
+        }
+        
+        /* Notification dot */
+        .notification-dot {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 20px;
+            height: 20px;
+            background: #ff4757;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+/* end of chat styles*/
+
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -1013,7 +1167,7 @@
                             <div class="contact-item-icon">📧</div>
                             <div>
                                 <strong>Email</strong>
-                                <p>iqraagenticai@gmail.com</p>
+                                <p>hello@iqratech.site</p>
                                 <p style="font-size: 0.9rem; color: #666;">We typically respond within 2 hours</p>
                             </div>
                         </div>
@@ -1103,7 +1257,7 @@
                     <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Transforming businesses through intelligent automation and AI-driven solutions.</p>
                     <p style="color: rgba(255,255,255,0.7);">📍 Mawson Lakes, SA 5095, Australia</p>
                     <p style="color: rgba(255,255,255,0.7);">📞 0469 081 788</p>
-                    <p style="color: rgba(255,255,255,0.7);">📧 iqraagenticai@gmail.com</p>
+                    <p style="color: rgba(255,255,255,0.7);">📧 hello@iqratech.site</p>
                 </div>
                 
                 <div class="footer-section">
@@ -1137,6 +1291,36 @@
             </div>
         </div>
     </footer>
+
+    <!----Chat integration floating style-->
+     <!-- Floating Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-title">🤖 AI Assistant</div>
+                <button class="chatbot-close" onclick="toggleChatbot()">×</button>
+            </div>
+            <div class="welcome-message" id="welcomeMessage">
+                <h3>👋 Welcome to Iqra Tech AI!</h3>
+                <p>I'm here to help you with questions about our AI solutions, services, and how we can transform your business. Feel free to ask me anything!</p>
+            </div>
+            <iframe 
+                class="chatbot-iframe" 
+                id="chatbotIframe"
+                src=""
+                frameborder="0"
+                allow="microphone; camera">
+            </iframe>
+        </div>
+        <button class="chatbot-toggle" onclick="toggleChatbot()" id="chatbotToggle">
+            💬
+            <div class="notification-dot" id="notificationDot">!</div>
+        </button>
+    </div>
+
+       <!----Chat integration floating style end-->
+
+
 
     <script>
         // Remove loading screen after page loads
@@ -1269,6 +1453,63 @@
                 });
             }
         });
+
+
+                //start of chat integration script
+     // Replace this URL with your actual Gradio app URL
+        const GRADIO_APP_URL = 'http://127.0.0.1:7861/'; // UPDATE THIS!
+        
+        let chatbotOpen = false;
+        let firstTime = true;
+        
+        function toggleChatbot() {
+            const window = document.getElementById('chatbotWindow');
+            const toggle = document.getElementById('chatbotToggle');
+            const iframe = document.getElementById('chatbotIframe');
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const notificationDot = document.getElementById('notificationDot');
+            
+            chatbotOpen = !chatbotOpen;
+            
+            if (chatbotOpen) {
+                window.classList.add('active');
+                toggle.innerHTML = '×';
+                notificationDot.style.display = 'none';
+                
+                // Load iframe only when opened for the first time
+                if (firstTime) {
+                    iframe.src = GRADIO_APP_URL;
+                    firstTime = false;
+                    
+                    // Hide welcome message after 5 seconds
+                    setTimeout(() => {
+                        welcomeMessage.style.display = 'none';
+                    }, 5000);
+                } else {
+                    welcomeMessage.style.display = 'none';
+                }
+            } else {
+                window.classList.remove('active');
+                toggle.innerHTML = '💬';
+            }
+        }
+        
+        // Show notification dot initially
+        document.addEventListener('DOMContentLoaded', function() {
+            const notificationDot = document.getElementById('notificationDot');
+            setTimeout(() => {
+                notificationDot.style.display = 'flex';
+            }, 3000); // Show after 3 seconds
+        });
+        
+        // Handle iframe loading
+        document.getElementById('chatbotIframe').addEventListener('load', function() {
+            console.log('Chatbot loaded successfully');
+        });
+        //End of chat integration script
+
+
+        
     </script>
 </body>
 </html>
@@ -1470,4 +1711,4 @@
                             <div style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1rem; background: linear-gradient(45deg, #4facfe, #00d4aa); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: bold;">
                                 MN
                             </div>
-                            <h
+                            <h  
