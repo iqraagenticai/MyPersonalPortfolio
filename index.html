@@ -41,56 +41,62 @@
             align-items: center;
             flex-wrap: wrap;
             max-width: 100%;
-            padding: 0 20px;
+            padding: 0 15px;
+            gap: 15px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
+            flex: 1;
+            min-width: 250px;
         }
 
         .logo-icon {
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             background: linear-gradient(45deg, #ff6b35, #f7931e);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         .company-info h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
+            font-size: 1.4rem;
+            margin-bottom: 2px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .company-info p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             opacity: 0.9;
         }
 
         .contact-header {
             display: flex;
-            gap: 15px;
+            gap: 8px;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .contact-btn {
-            padding: 10px 20px;
+            padding: 8px 12px;
             border: none;
-            border-radius: 25px;
+            border-radius: 20px;
             cursor: pointer;
             font-weight: bold;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 5px;
             transition: all 0.3s ease;
-            font-size: 14px;
+            font-size: 12px;
+            white-space: nowrap;
         }
 
         .phone-btn {
@@ -116,7 +122,7 @@
         /* Navigation */
         nav {
             background: rgba(255,255,255,0.1);
-            padding: 10px 0;
+            padding: 8px 0;
         }
 
         .nav-menu {
@@ -124,21 +130,24 @@
             justify-content: center;
             list-style: none;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 3px;
+            padding: 0 10px;
         }
 
         .nav-menu li {
-            margin: 0 5px;
+            margin: 2px;
         }
 
         .nav-menu a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 20px;
+            padding: 8px 12px;
+            border-radius: 15px;
             transition: all 0.3s ease;
             font-weight: 500;
             display: block;
+            font-size: 13px;
+            text-align: center;
         }
 
         .nav-menu a:hover,
@@ -164,7 +173,7 @@
 
         .page-content {
             max-width: 100%;
-            padding: 20px;
+            padding: 15px;
             margin: 0;
         }
 
@@ -175,8 +184,8 @@
             background-position: center;
             color: #1a237e;
             text-align: center;
-            padding: 100px 20px;
-            margin-bottom: 30px;
+            padding: 60px 15px 40px;
+            margin-bottom: 20px;
             position: relative;
             overflow: hidden;
         }
@@ -199,16 +208,16 @@
         }
 
         .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(255,255,255,0.3);
             color: #0d47a1;
             font-weight: bold;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -219,44 +228,48 @@
         .hero-features {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
+            gap: 15px;
+            margin-top: 30px;
             flex-wrap: wrap;
         }
 
         .hero-feature {
             background: rgba(255,255,255,0.9);
-            padding: 20px;
-            border-radius: 15px;
+            padding: 15px;
+            border-radius: 12px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.3);
             box-shadow: 0 8px 32px rgba(0,0,0,0.1);
             color: #1a237e;
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
         }
 
         .hero-feature h3 {
             color: #0d47a1;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            font-size: 1rem;
         }
 
         .hero-feature p {
             color: #1565c0;
-            font-size: 1rem;
+            font-size: 0.9rem;
             margin: 0;
         }
 
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .service-card {
             background: white;
             border-radius: 15px;
-            padding: 30px;
+            padding: 25px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             border-top: 4px solid #3f51b5;
@@ -268,22 +281,22 @@
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(45deg, #3f51b5, #2196f3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: white;
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         .service-card h3 {
             color: #1a237e;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
         }
 
         .service-card ul {
@@ -292,10 +305,11 @@
         }
 
         .service-card li {
-            padding: 8px 0;
+            padding: 6px 0;
             border-bottom: 1px solid #eee;
             position: relative;
-            padding-left: 25px;
+            padding-left: 20px;
+            font-size: 0.9rem;
         }
 
         .service-card li::before {
@@ -309,9 +323,9 @@
         /* Products Grid */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .product-card {
@@ -328,42 +342,58 @@
         }
 
         .product-image {
-            height: 200px;
+            height: 150px;
             background: linear-gradient(45deg, #e3f2fd, #bbdefb);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 3rem;
             color: #1976d2;
         }
 
         .product-info {
-            padding: 20px;
+            padding: 15px;
         }
 
         .product-info h4 {
             color: #1a237e;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
             margin-bottom: 10px;
-            font-size: 1.3rem;
+        }
+
+        .product-info ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .product-info li {
+            font-size: 0.85rem;
+            padding: 3px 0;
+            color: #666;
         }
 
         /* Section Titles */
         .section-title {
             text-align: center;
             color: #1a237e;
-            font-size: 2.5rem;
-            margin: 40px 0;
+            font-size: 2rem;
+            margin: 30px 0 25px;
             position: relative;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -8px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
+            width: 80px;
+            height: 3px;
             background: linear-gradient(45deg, #3f51b5, #2196f3);
             border-radius: 2px;
         }
@@ -371,86 +401,107 @@
         /* Safety Features */
         .safety-features {
             background: linear-gradient(135deg, #e8f5e8, #f1f8e9);
-            padding: 40px 20px;
-            border-radius: 20px;
-            margin: 40px 0;
-            border-left: 5px solid #4CAF50;
+            padding: 30px 15px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 4px solid #4CAF50;
         }
 
         .safety-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .safety-item {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             background: white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         .safety-icon {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: #4CAF50;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .safety-item h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .safety-item p {
+            font-size: 0.85rem;
+            color: #666;
         }
 
         /* Contact Section */
         .contact-section {
             background: white;
-            padding: 40px 20px;
-            border-radius: 20px;
-            margin: 40px 0;
+            padding: 30px 15px;
+            border-radius: 15px;
+            margin: 30px 0;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .contact-method {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             border: 2px solid #e0e0e0;
-            border-radius: 15px;
+            border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .contact-method:hover {
             border-color: #3f51b5;
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+        }
+
+        .contact-method h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-method p {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
         }
 
         .contact-method .contact-btn {
-            margin: 20px auto 0;
+            margin: 15px auto 0;
             display: inline-flex;
         }
 
         /* Achievements */
         .achievements-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin-top: 30px;
+            margin-top: 25px;
         }
 
         .achievement-card {
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
@@ -462,42 +513,198 @@
         }
 
         .achievement-number {
-            font-size: 3rem;
+            font-size: 2.2rem;
             font-weight: bold;
             color: #3f51b5;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        /* Responsive Design */
+        .achievement-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .achievement-card p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Mobile-specific styles */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
-                gap: 15px;
-                text-align: center;
+                gap: 10px;
+                padding: 0 10px;
+            }
+
+            .logo {
+                justify-content: center;
+                min-width: auto;
+            }
+
+            .logo-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .company-info h1 {
+                font-size: 1.2rem;
+            }
+
+            .company-info p {
+                font-size: 0.75rem;
             }
 
             .contact-header {
-                flex-wrap: wrap;
                 justify-content: center;
+                width: 100%;
+            }
+
+            .contact-btn {
+                padding: 6px 10px;
+                font-size: 11px;
+                gap: 3px;
+            }
+
+            .nav-menu {
+                justify-content: center;
+                padding: 0 5px;
+            }
+
+            .nav-menu a {
+                padding: 6px 8px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 40px 10px 30px;
             }
 
             .hero h2 {
-                font-size: 2.5rem;
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 20px;
             }
 
             .hero-features {
                 flex-direction: column;
+                gap: 12px;
                 align-items: center;
             }
 
-            .nav-menu {
-                flex-direction: column;
-                align-items: center;
+            .hero-feature {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+                margin: 25px 0 20px;
             }
 
             .services-grid,
             .products-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .service-card,
+            .product-card {
+                padding: 20px;
+            }
+
+            .safety-features {
+                padding: 20px 10px;
+            }
+
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 20px 10px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .achievement-number {
+                font-size: 1.8rem;
+            }
+
+            .page-content {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 0 5px;
+            }
+
+            .contact-header {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .contact-btn {
+                width: 100%;
+                max-width: 200px;
+                justify-content: center;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+            }
+
+            .nav-menu a {
+                width: 120px;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .service-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .safety-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+
+            .safety-icon {
+                margin: 0 auto;
             }
         }
 
@@ -506,8 +713,8 @@
             background: #1a237e;
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 50px;
+            padding: 30px 15px;
+            margin-top: 40px;
         }
 
         .footer-content {
@@ -518,8 +725,8 @@
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
+            gap: 20px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
         }
 
@@ -527,10 +734,36 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 14px;
+            padding: 5px;
         }
 
         .footer-links a:hover {
             color: #64b5f6;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        footer div a {
+            font-size: 0.85rem;
+            margin: 0 5px;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        @media (max-width: 480px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            footer div a {
+                display: block;
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -547,7 +780,7 @@
             </div>
             <div class="contact-header">
                 <a href="tel:+918694953841" class="contact-btn phone-btn">
-                    📞 Call Now
+                    📞 Call
                 </a>
                 <a href="mailto:info@progasservices.com" class="contact-btn email-btn">
                     ✉️ Email
@@ -559,12 +792,12 @@
         </div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="#" onclick="showPage('home')" class="nav-link active">🏠 Home</a></li>
-                <li><a href="#" onclick="showPage('services')" class="nav-link">🔧 Services</a></li>
-                <li><a href="#" onclick="showPage('sales')" class="nav-link">🛒 Sales</a></li>
-                <li><a href="#" onclick="showPage('repairs')" class="nav-link">⚡ Repairs</a></li>
-                <li><a href="#" onclick="showPage('achievements')" class="nav-link">🏆 Achievements</a></li>
-                <li><a href="#" onclick="showPage('contact')" class="nav-link">📞 Contact</a></li>
+                <li><a href="#" class="nav-link active" data-page="home" onclick="showPage('home', this)">🏠 Home</a></li>
+                <li><a href="#" class="nav-link" data-page="services" onclick="showPage('services', this)">🔧 Services</a></li>
+                <li><a href="#" class="nav-link" data-page="sales" onclick="showPage('sales', this)">🛒 Sales</a></li>
+                <li><a href="#" class="nav-link" data-page="repairs" onclick="showPage('repairs', this)">⚡ Repairs</a></li>
+                <li><a href="#" class="nav-link" data-page="achievements" onclick="showPage('achievements', this)">🏆 Achievements</a></li>
+                <li><a href="#" class="nav-link" data-page="contact" onclick="showPage('contact', this)">📞 Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -594,7 +827,7 @@
             <div class="section-title">Why Choose ProGas Services?</div>
             
             <div class="safety-features">
-                <h3 style="text-align: center; color: #2e7d32; font-size: 2rem; margin-bottom: 20px;">🔒 Our Safety Standards</h3>
+                <h3 style="text-align: center; color: #2e7d32; font-size: 1.5rem; margin-bottom: 15px;">🔒 Our Safety Standards</h3>
                 <div class="safety-grid">
                     <div class="safety-item">
                         <div class="safety-icon">🛡️</div>
@@ -684,12 +917,32 @@
                         <li>Gas pipeline connections</li>
                         <li>Safety valve installation</li>
                         <li>Multi-appliance hub setup</li>
-                        <li>Ventilation system installation</li>
+                        <li>Ventilation planning</li>
+                        <li>Cost estimation services</li>
+                        <li>Upgrade recommendations</li>
+                        <li>Regulatory compliance advice</li>
+                        <li>System installation (commercial & residential)</li>
                         <li>Gas meter connections</li>
                         <li>Compliance certification</li>
                     </ul>
                 </div>
 
+                <div class="service-card">
+                    <div class="service-icon">📞</div>
+                    <h3>Support Services</h3>
+                    <ul>
+                        <li>Technical phone support</li>
+                        <li>Troubleshooting assistance</li>
+                        <li>Warranty claim processing</li>
+                        <li>Parts availability information</li>
+                        <li>Maintenance reminders</li>
+                        <li>Follow-up service calls</li>
+                        <li>Customer training sessions</li>
+                        <li>Documentation and manuals</li>
+                    </ul>
+                </div>
+
+                <!-- Additional services that were truncated in the original upload -->
                 <div class="service-card">
                     <div class="service-icon">🛠️</div>
                     <h3>Maintenance Services</h3>
@@ -743,25 +996,8 @@
                         <li>Appliance selection guidance</li>
                         <li>Safety compliance audits</li>
                         <li>Energy efficiency assessments</li>
-                        <li>Ventilation planning</li>
-                        <li>Cost estimation services</li>
-                        <li>Upgrade recommendations</li>
-                        <li>Regulatory compliance advice</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">📞</div>
-                    <h3>Support Services</h3>
-                    <ul>
-                        <li>Technical phone support</li>
-                        <li>Troubleshooting assistance</li>
-                        <li>Warranty claim processing</li>
-                        <li>Parts availability information</li>
-                        <li>Maintenance reminders</li>
-                        <li>Follow-up service calls</li>
-                        <li>Customer training sessions</li>
-                        <li>Documentation and manuals</li>
+                        <li>Ventilation planning & advice</li>
+                        <li>Manufacturer liaison for warranty support</li>
                     </ul>
                 </div>
             </div>
@@ -773,7 +1009,7 @@
         <div class="page-content">
             <div class="section-title">Products & Sales</div>
             
-            <h3 style="color: #1a237e; font-size: 1.8rem; margin-bottom: 20px;">🔥 Gas Stoves</h3>
+            <h3 style="color: #1a237e; font-size: 1.5rem; margin-bottom: 15px;">🔥 Gas Stoves</h3>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">🔥</div>
@@ -832,7 +1068,7 @@
                 </div>
             </div>
 
-            <h3 style="color: #1a237e; font-size: 1.8rem; margin: 40px 0 20px;">🏠 Kitchen Chimneys</h3>
+            <h3 style="color: #1a237e; font-size: 1.5rem; margin: 30px 0 15px;">🏠 Kitchen Chimneys</h3>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">🏠</div>
@@ -891,7 +1127,7 @@
                 </div>
             </div>
 
-            <h3 style="color: #1a237e; font-size: 1.8rem; margin: 40px 0 20px;">⚡ Gas Hubs & Accessories</h3>
+            <h3 style="color: #1a237e; font-size: 1.5rem; margin: 30px 0 15px;">⚡ Gas Hubs & Accessories</h3>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">⚡</div>
@@ -978,8 +1214,8 @@
                 </div>
             </div>
 
-            <div class="safety-features" style="margin-top: 40px;">
-                <h3 style="text-align: center; color: #2e7d32; font-size: 1.8rem; margin-bottom: 20px;">💰 Why Buy From Us?</h3>
+            <div class="safety-features" style="margin-top: 30px;">
+                <h3 style="text-align: center; color: #2e7d32; font-size: 1.4rem; margin-bottom: 15px;">💰 Why Buy From Us?</h3>
                 <div class="safety-grid">
                     <div class="safety-item">
                         <div class="safety-icon">✅</div>
@@ -1123,8 +1359,8 @@
                 </div>
             </div>
 
-            <div class="safety-features" style="margin-top: 40px;">
-                <h3 style="text-align: center; color: #d32f2f; font-size: 1.8rem; margin-bottom: 20px;">🚨 Common Warning Signs</h3>
+            <div class="safety-features" style="margin-top: 30px;">
+                <h3 style="text-align: center; color: #d32f2f; font-size: 1.4rem; margin-bottom: 15px;">🚨 Common Warning Signs</h3>
                 <div class="safety-grid">
                     <div class="safety-item">
                         <div class="safety-icon" style="background: #f44336;">💨</div>
@@ -1158,8 +1394,8 @@
             </div>
 
             <div class="contact-section">
-                <h3 style="text-align: center; color: #1a237e; font-size: 1.8rem;">🚨 Need Emergency Repair?</h3>
-                <p style="text-align: center; margin: 20px 0;">Don't wait for small problems to become big emergencies. Our expert technicians are just a call away!</p>
+                <h3 style="text-align: center; color: #1a237e; font-size: 1.4rem;">🚨 Need Emergency Repair?</h3>
+                <p style="text-align: center; margin: 15px 0; font-size: 0.95rem;">Don't wait for small problems to become big emergencies. Our expert technicians are just a call away!</p>
                 <div class="contact-grid">
                     <div class="contact-method">
                         <h4>📞 Emergency Hotline</h4>
@@ -1224,8 +1460,8 @@
                 </div>
             </div>
 
-            <div class="safety-features" style="margin-top: 40px;">
-                <h3 style="text-align: center; color: #2e7d32; font-size: 2rem; margin-bottom: 20px;">🏆 Awards & Certifications</h3>
+            <div class="safety-features" style="margin-top: 30px;">
+                <h3 style="text-align: center; color: #2e7d32; font-size: 1.5rem; margin-bottom: 15px;">🏆 Awards & Certifications</h3>
                 <div class="safety-grid">
                     <div class="safety-item">
                         <div class="safety-icon">🏆</div>
@@ -1272,7 +1508,7 @@
                 </div>
             </div>
 
-            <div class="services-grid" style="margin-top: 40px;">
+            <div class="services-grid" style="margin-top: 30px;">
                 <div class="service-card">
                     <div class="service-icon">📈</div>
                     <h3>Business Milestones</h3>
@@ -1329,7 +1565,7 @@
             <div class="contact-section">
                 <div class="contact-grid">
                     <div class="contact-method">
-                        <div style="font-size: 4rem; margin-bottom: 20px;">📞</div>
+                        <div style="font-size: 3rem; margin-bottom: 15px;">📞</div>
                         <h4>Phone Support</h4>
                         <p>Speak directly with our experts</p>
                         <p><strong>Main Line:</strong> +91-869-495-3841</p>
@@ -1339,7 +1575,7 @@
                     </div>
 
                     <div class="contact-method">
-                        <div style="font-size: 4rem; margin-bottom: 20px;">💬</div>
+                        <div style="font-size: 3rem; margin-bottom: 15px;">💬</div>
                         <h4>WhatsApp Support</h4>
                         <p>Chat, send photos, get quotes</p>
                         <p><strong>Response Time:</strong> Under 15 minutes</p>
@@ -1349,7 +1585,7 @@
                     </div>
 
                     <div class="contact-method">
-                        <div style="font-size: 4rem; margin-bottom: 20px;">✉️</div>
+                        <div style="font-size: 3rem; margin-bottom: 15px;">✉️</div>
                         <h4>Email Support</h4>
                         <p>Detailed inquiries and documentation</p>
                         <p><strong>General:</strong> info@progasservices.com</p>
@@ -1407,7 +1643,7 @@
             </div>
 
             <div class="safety-features">
-                <h3 style="text-align: center; color: #2e7d32; font-size: 1.8rem; margin-bottom: 20px;">📋 Before You Call</h3>
+                <h3 style="text-align: center; color: #2e7d32; font-size: 1.4rem; margin-bottom: 15px;">📋 Before You Call</h3>
                 <div class="safety-grid">
                     <div class="safety-item">
                         <div class="safety-icon">📝</div>
@@ -1446,51 +1682,70 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#" onclick="showPage('home')">Home</a>
-                <a href="#" onclick="showPage('services')">Services</a>
-                <a href="#" onclick="showPage('sales')">Sales</a>
-                <a href="#" onclick="showPage('repairs')">Repairs</a>
-                <a href="#" onclick="showPage('achievements')">Achievements</a>
-                <a href="#" onclick="showPage('contact')">Contact</a>
+                <a href="#" onclick="showPage('home', this)">Home</a>
+                <a href="#" onclick="showPage('services', this)">Services</a>
+                <a href="#" onclick="showPage('sales', this)">Sales</a>
+                <a href="#" onclick="showPage('repairs', this)">Repairs</a>
+                <a href="#" onclick="showPage('achievements', this)">Achievements</a>
+                <a href="#" onclick="showPage('contact', this)">Contact</a>
             </div>
             <p>&copy; 2024 ProGas Services. All rights reserved.</p>
-            <p>Professional Gas Stove, Chimney & Hub Solutions | Licensed & Insured | 24/7 Emergency Service</p>
-            <div style="margin-top: 20px;">
-                <a href="tel:+918694953841" style="color: #4CAF50; text-decoration: none; margin: 0 10px;">📞 +91-869-495-3841</a>
-                <a href="mailto:info@progasservices.com" style="color: #2196F3; text-decoration: none; margin: 0 10px;">✉️ info@progasservices.com</a>
-                <a href="https://wa.me/918694953841" style="color: #25D366; text-decoration: none; margin: 0 10px;" target="_blank">💬 WhatsApp</a>
+            <p>Professional Gas Stove, Chimney &amp; Hub Solutions | Licensed &amp; Insured | 24/7 Emergency Service</p>
+            <div style="margin-top: 15px;">
+                <a href="tel:+918694953841" style="color: #4CAF50; text-decoration: none; margin: 0 5px;">📞 +91-869-495-3841</a>
+                <a href="mailto:info@progasservices.com" style="color: #2196F3; text-decoration: none; margin: 0 5px;">✉️ info@progasservices.com</a>
+                <a href="https://wa.me/918694953841" style="color: #25D366; text-decoration: none; margin: 0 5px;" target="_blank">💬 WhatsApp</a>
             </div>
         </div>
     </footer>
 
     <script>
         // Page Navigation
-        function showPage(pageId) {
+        function showPage(pageId, triggerEl) {
             // Hide all pages
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
             
             // Show selected page
-            document.getElementById(pageId).classList.add('active');
+            const target = document.getElementById(pageId);
+            if (target) target.classList.add('active');
             
-            // Update navigation
+            // Update navigation active state
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => link.classList.remove('active'));
-            event.target.classList.add('active');
-            
+
+            // Try to use provided trigger element, otherwise find matching nav-link
+            if (triggerEl && triggerEl.classList) {
+                triggerEl.classList.add('active');
+            } else {
+                const matching = document.querySelector(`.nav-link[data-page="${pageId}"]`);
+                if (matching) matching.classList.add('active');
+            }
+
             // Scroll to top
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Smooth scrolling for internal links
+        // Smooth scrolling + event binding + animations
         document.addEventListener('DOMContentLoaded', function() {
-            // Add click handlers to all nav links
+            // Add click handlers to all nav links that call showPage
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    navLinks.forEach(l => l.classList.remove('active'));
-                    this.classList.add('active');
+                    const page = this.dataset.page;
+                    showPage(page, this);
+                });
+            });
+
+            // Also bind footer links (they don't have nav-link class)
+            document.querySelectorAll('footer .footer-links a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const onclick = this.getAttribute('onclick') || '';
+                    // Try to extract page id from onclick attribute
+                    const match = onclick.match(/showPage\('([a-zA-Z0-9_-]+)'/);
+                    if (match) showPage(match[1], this);
                 });
             });
 
@@ -1516,13 +1771,16 @@
                 card.style.transition = 'all 0.6s ease';
                 observer.observe(card);
             });
+
+            // Start emergency highlight pulse on phone buttons
+            highlightEmergency();
         });
 
         // Emergency contact highlight
         function highlightEmergency() {
             const emergencyBtns = document.querySelectorAll('.phone-btn');
             emergencyBtns.forEach(btn => {
-                btn.style.animation = 'pulse 1s infinite';
+                btn.style.animation = 'pulse 1.5s infinite';
             });
         }
 
@@ -1530,8 +1788,8 @@
         const style = document.createElement('style');
         style.textContent = `
             @keyframes pulse {
-                0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
-                70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+                0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.6); }
+                70% { box-shadow: 0 0 0 14px rgba(76, 175, 80, 0); }
                 100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
             }
         `;
@@ -1539,4 +1797,3 @@
     </script>
 </body>
 </html>
-                    
