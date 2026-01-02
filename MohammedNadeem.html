@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Nadeem - IT Project Leader & Agile Specialist</title>
+    <title>Mohammed Nadeem | IT Project Leader & Agile Specialist | Adelaide, SA</title>
+    <meta name="description" content="Mohammed Nadeem - IT Project Leader with 14+ years experience in SCRUM, Agile, ITIL, and service delivery. Based in Mawson Lakes, SA. Available for new opportunities.">
     <style>
         * {
             margin: 0;
@@ -227,7 +228,7 @@
             border-left: 4px solid #ffa726;
         }
 
-        /* Chatbot Styles */
+        /* Chatbot Styles - Updated from reference */
         .chatbot-container {
             position: fixed;
             bottom: 20px;
@@ -235,7 +236,7 @@
             z-index: 1000;
         }
 
-        .chat-button {
+        .chatbot-toggle {
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -244,19 +245,41 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: transform 0.3s;
+            position: relative;
         }
 
-        .chat-button:hover {
+        .chatbot-toggle:hover {
             transform: scale(1.1);
         }
 
-        .chat-window {
+        .notification-dot {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            background: #ff4444;
+            border-radius: 50%;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
             display: none;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .chatbot-window {
             position: fixed;
             bottom: 90px;
             right: 20px;
@@ -265,15 +288,17 @@
             background: white;
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            display: none;
             flex-direction: column;
             overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .chat-window.active {
+        .chatbot-window.active {
             display: flex;
         }
 
-        .chat-header {
+        .chatbot-header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             padding: 1rem;
@@ -282,15 +307,16 @@
             align-items: center;
         }
 
-        .chat-header h3 {
+        .chatbot-title {
             font-size: 1.1rem;
+            font-weight: 600;
         }
 
-        .close-chat {
+        .chatbot-close {
             background: none;
             border: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             cursor: pointer;
             padding: 0;
             width: 30px;
@@ -298,11 +324,34 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            line-height: 1;
         }
 
-        .chat-iframe {
+        .chatbot-close:hover {
+            opacity: 0.8;
+        }
+
+        .welcome-message {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+            padding: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .welcome-message h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .welcome-message p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .chatbot-iframe {
             width: 100%;
-            height: 100%;
+            flex: 1;
             border: none;
         }
 
@@ -324,10 +373,11 @@
                 flex-direction: column;
             }
 
-            .chat-window {
+            .chatbot-window {
                 width: 90vw;
                 right: 5vw;
                 height: 70vh;
+                bottom: 90px;
             }
         }
     </style>
@@ -515,38 +565,24 @@
         </section>
     </div>
 
-    <div class="chatbot-container">
-        <button class="chat-button" onclick="toggleChat()" id="chatButton">💬</button>
-        <div class="chat-window" id="chatWindow">
-            <div class="chat-header">
-                <h3>Career Assistant</h3>
-                <button class="close-chat" onclick="toggleChat()">×</button>
-            </div>
-            <iframe 
-                class="chat-iframe"
-                src="https://iqraagenticai-career-conversations.hf.space"
-                allow="microphone; camera"
-            ></iframe>
-        </div>
-    </div>
- <!----Chat integration floating style-->
-    <!-- Floating Chatbot -->
+    <!-- Chatbot Container - Updated from reference -->
     <div class="chatbot-container" aria-hidden="false">
-        <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="AI Assistant Window">
+        <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="Career Assistant Window">
             <div class="chatbot-header">
-                <div class="chatbot-title">🤖 AI Assistant</div>
+                <div class="chatbot-title">🤖 Career Assistant</div>
                 <button class="chatbot-close" onclick="toggleChatbot()" aria-label="Close chat">×</button>
             </div>
             <div class="welcome-message" id="welcomeMessage">
-                <h3>👋 Welcome to Iqra Tech AI!</h3>
-                <p>I'm here to help you with questions about my project management experince. Feel free to ask me anything!</p>
+                <h3>👋 Welcome!</h3>
+                <p>I'm here to help answer questions about Mohammed's experience, skills, and career background. Feel free to ask me anything!</p>
             </div>
-            <iframe class="chatbot-iframe"
-                    id="chatbotIframe"
-                    src="https://iqraagenticai-career-conversations.hf.space/"
-                    frameborder="0"
-                    allow="microphone; camera"
-                    title="Chatbot iframe">
+            <iframe 
+                class="chatbot-iframe"
+                id="chatbotIframe"
+                src=""
+                frameborder="0"
+                allow="microphone; camera"
+                title="Career Assistant Chatbot">
             </iframe>
         </div>
         <button class="chatbot-toggle" onclick="toggleChatbot()" id="chatbotToggle" aria-haspopup="dialog" aria-expanded="false">
@@ -555,12 +591,59 @@
         </button>
     </div>
 
-    <!----Chat integration floating style end-->
-
     <script>
-        function toggleChat() {
-            const chatWindow = document.getElementById('chatWindow');
-            chatWindow.classList.toggle('active');
+        // Chatbot functionality - Updated from reference
+        const GRADIO_APP_URL = 'https://iqraagenticai-career-conversations.hf.space';
+        let chatbotOpen = false;
+        let firstTime = true;
+
+        function toggleChatbot() {
+            const windowEl = document.getElementById('chatbotWindow');
+            const toggle = document.getElementById('chatbotToggle');
+            const iframe = document.getElementById('chatbotIframe');
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const notificationDot = document.getElementById('notificationDot');
+
+            chatbotOpen = !chatbotOpen;
+
+            if (chatbotOpen) {
+                if (windowEl) windowEl.classList.add('active');
+                if (toggle) toggle.setAttribute('aria-expanded', 'true');
+                if (notificationDot) notificationDot.style.display = 'none';
+
+                // Load iframe only when opened for the first time
+                if (firstTime && iframe) {
+                    iframe.src = GRADIO_APP_URL;
+                    firstTime = false;
+
+                    // Hide welcome message after 5 seconds
+                    setTimeout(() => {
+                        if (welcomeMessage) welcomeMessage.style.display = 'none';
+                    }, 5000);
+                } else if (welcomeMessage) {
+                    welcomeMessage.style.display = 'none';
+                }
+
+            } else {
+                if (windowEl) windowEl.classList.remove('active');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // Show notification dot initially
+        document.addEventListener('DOMContentLoaded', function() {
+            const notificationDot = document.getElementById('notificationDot');
+            setTimeout(() => {
+                if (notificationDot) notificationDot.style.display = 'flex';
+            }, 3000);
+        });
+
+        // Handle iframe loading
+        const chatbotIframe = document.getElementById('chatbotIframe');
+        if (chatbotIframe) {
+            chatbotIframe.addEventListener('load', function() {
+                console.log('Career assistant chatbot loaded successfully');
+            });
         }
 
         // Smooth scrolling for navigation
@@ -568,7 +651,9 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         });
     </script>
