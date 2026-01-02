@@ -529,6 +529,33 @@
             ></iframe>
         </div>
     </div>
+ <!----Chat integration floating style-->
+    <!-- Floating Chatbot -->
+    <div class="chatbot-container" aria-hidden="false">
+        <div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="AI Assistant Window">
+            <div class="chatbot-header">
+                <div class="chatbot-title">🤖 AI Assistant</div>
+                <button class="chatbot-close" onclick="toggleChatbot()" aria-label="Close chat">×</button>
+            </div>
+            <div class="welcome-message" id="welcomeMessage">
+                <h3>👋 Welcome to Iqra Tech AI!</h3>
+                <p>I'm here to help you with questions about my project management experince. Feel free to ask me anything!</p>
+            </div>
+            <iframe class="chatbot-iframe"
+                    id="chatbotIframe"
+                    src="https://iqraagenticai-career-conversations.hf.space/"
+                    frameborder="0"
+                    allow="microphone; camera"
+                    title="Chatbot iframe">
+            </iframe>
+        </div>
+        <button class="chatbot-toggle" onclick="toggleChatbot()" id="chatbotToggle" aria-haspopup="dialog" aria-expanded="false">
+            💬
+            <div class="notification-dot" id="notificationDot">!</div>
+        </button>
+    </div>
+
+    <!----Chat integration floating style end-->
 
     <script>
         function toggleChat() {
